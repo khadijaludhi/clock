@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* this resets default box model behavior, eliminates any default spacing, and ensures consistent sizing and spacing across different elements on the page */
+
+body {
+    background: #fcf8f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    /* stops scroll bars appearing */
+}
+
+
+.clock {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(246, 181, 192);
+    border-radius: 50%;
+    /* makes a circle - 50% of width = height = radius */
+    border: 20px solid #F1ECEC;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    /* moves clock away from bottom of screen */
+    position: relative;
+    /* allows hands to be positioned relative to clock */
+}
+
+.number {
+    color: #132743;
+}
+
+.clock .number {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    /* made a variable called "rotation" so different deg values can be used for every number */
+    --rotation: 0;
+    /* default value for rotation */
+}
+
+.clock .number1 {
+    --rotation: 30deg;
+}
+
+.clock .number2 {
+    --rotation: 60deg;
+}
+
+.clock .number3 {
+    --rotation: 90deg;
+}
+
+.clock .number4 {
+    --rotation: 120deg;
+}
+
+.clock .number5 {
+    --rotation: 150deg;
+}
+
+.clock .number6 {
+    --rotation: 180deg;
+}
+
+.clock .number7 {
+    --rotation: 210deg;
+}
+
+.clock .number8 {
+    --rotation: 240deg;
+}
+
+.clock .number9 {
+    --rotation: 270deg;
+}
+
+.clock .number10 {
+    --rotation: 300deg;
+}
+
+.clock .number11 {
+    --rotation: 330deg;
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: #F1ECEC;
+    z-index: 11;
+    /* places dot on top of hands */
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* moves the dot to the centre of the clock */
+}
+
+.clock .hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform: translateX(-50%)rotate(calc(var(--rotation)* 1deg));
+    /* makes the hand start at the top & made a variable called "rotation" so different deg values can be used for hands */
+    --rotation: 0;
+    /* default value for rotation */
+    transform-origin: bottom;
+    /* hands pivot at centre */
+    z-index: 10;
+    /* places hands on top of numbers */
+}
+
+.clock .hand.second {
+    width: 3px;
+    height: 41%;
+    background-color: #3baea0;
+}
+
+.clock .hand.minute {
+    width: 7px;
+    height: 37%;
+    background-color: #F1ECEC;
+}
+
+.clock .hand.hour {
+    width: 10px;
+    height: 28%;
+    background-color: #EE4266;
+}
+
+/* media query medium screen size */
+@media (max-width: 1100px) {
+    .clock {
+        max-width: 500px;
+        max-height: 500px;
+        margin-bottom: 300px;
+    }
+
+    .clock .number {
+        font-size: 2.5rem;
+    }
+}
+
+/* Adjustments for smartphones and smaller screens */
+@media (max-width: 540px) {
+    .clock {
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .clock .number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 280px) {
+    .clock {
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .clock .number {
+        font-size: 1.5rem;
+    }
+}
