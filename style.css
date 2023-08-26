@@ -9,7 +9,7 @@
 /* this resets default box model behavior, eliminates any default spacing, and ensures consistent sizing and spacing across different elements on the page */
 
 body {
-    background: #fff6e5;
+    background: #fcf8f3;
     display: flex;
     justify-content: center;
     align-items: center;
