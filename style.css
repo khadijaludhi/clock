@@ -149,6 +149,7 @@ body {
     .clock {
         max-width: 490px;
         max-height: 490px;
+        margin-bottom: 200px;
     }
 
     .clock .number {
