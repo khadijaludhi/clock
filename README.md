@@ -1,2 +1,2 @@
 # clock
-vanilla javascript clock
+A vanilla javascript clock
