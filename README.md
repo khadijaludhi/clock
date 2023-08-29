@@ -1,7 +1,9 @@
 # Animated Clock 
-**Try it out here:** [https://khadijaludhi.github.io/clock/](https://khadijaludhi.github.io/clock/)
 
 ## Introduction
+
+**Try it out here:** [https://khadijaludhi.github.io/clock/](https://khadijaludhi.github.io/clock/)
+
 A vanilla javascript clock
 
 In this project, I've created an animated clock that showcases my skills in combining HTML, CSS, and JavaScript to create an interactive and visually appealing user experience.
