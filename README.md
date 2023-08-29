@@ -1,4 +1,5 @@
 # Animated Clock 
+**Try it out here:** [https://khadijaludhi.github.io/clock/](https://khadijaludhi.github.io/clock/)
 
 ## Introduction
 A vanilla javascript clock
